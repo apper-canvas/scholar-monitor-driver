@@ -1,0 +1,42 @@
+[
+  {
+    "Id": 1,
+    "name": "AP Mathematics",
+    "subject": "Mathematics",
+    "period": "1st Period",
+    "room": "Room 101",
+    "studentIds": [1, 2, 5, 6]
+  },
+  {
+    "Id": 2,
+    "name": "English Literature",
+    "subject": "English",
+    "period": "2nd Period",
+    "room": "Room 205",
+    "studentIds": [3, 4, 7, 8]
+  },
+  {
+    "Id": 3,
+    "name": "Biology Lab",
+    "subject": "Science",
+    "period": "3rd Period",
+    "room": "Lab 301",
+    "studentIds": [1, 3, 5, 7]
+  },
+  {
+    "Id": 4,
+    "name": "World History",
+    "subject": "History",
+    "period": "4th Period",
+    "room": "Room 152",
+    "studentIds": [2, 4, 6, 8]
+  },
+  {
+    "Id": 5,
+    "name": "Chemistry Advanced",
+    "subject": "Science",
+    "period": "5th Period",
+    "room": "Lab 302",
+    "studentIds": [1, 2, 3, 4]
+  }
+]

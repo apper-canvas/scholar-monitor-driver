@@ -1,0 +1,82 @@
+[
+  {
+    "Id": 1,
+    "studentId": 1,
+    "classId": 1,
+    "assignmentName": "Calculus Test 1",
+    "score": 92,
+    "maxScore": 100,
+    "date": "2024-09-15",
+    "category": "Test"
+  },
+  {
+    "Id": 2,
+    "studentId": 1,
+    "classId": 1,
+    "assignmentName": "Homework Set 3",
+    "score": 88,
+    "maxScore": 100,
+    "date": "2024-09-10",
+    "category": "Homework"
+  },
+  {
+    "Id": 3,
+    "studentId": 2,
+    "classId": 1,
+    "assignmentName": "Calculus Test 1",
+    "score": 78,
+    "maxScore": 100,
+    "date": "2024-09-15",
+    "category": "Test"
+  },
+  {
+    "Id": 4,
+    "studentId": 3,
+    "classId": 2,
+    "assignmentName": "Essay: Character Analysis",
+    "score": 95,
+    "maxScore": 100,
+    "date": "2024-09-12",
+    "category": "Essay"
+  },
+  {
+    "Id": 5,
+    "studentId": 4,
+    "classId": 2,
+    "assignmentName": "Essay: Character Analysis",
+    "score": 87,
+    "maxScore": 100,
+    "date": "2024-09-12",
+    "category": "Essay"
+  },
+  {
+    "Id": 6,
+    "studentId": 1,
+    "classId": 3,
+    "assignmentName": "Lab Report: Cell Division",
+    "score": 91,
+    "maxScore": 100,
+    "date": "2024-09-08",
+    "category": "Lab"
+  },
+  {
+    "Id": 7,
+    "studentId": 5,
+    "classId": 1,
+    "assignmentName": "Calculus Test 1",
+    "score": 84,
+    "maxScore": 100,
+    "date": "2024-09-15",
+    "category": "Test"
+  },
+  {
+    "Id": 8,
+    "studentId": 6,
+    "classId": 1,
+    "assignmentName": "Calculus Test 1",
+    "score": 76,
+    "maxScore": 100,
+    "date": "2024-09-15",
+    "category": "Test"
+  }
+]
