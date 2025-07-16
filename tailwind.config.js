@@ -27,11 +27,18 @@ export default {
           500: "#F6AD55",
           600: "#ED8936",
           700: "#C05621"
-        },
+},
         success: "#48BB78",
         warning: "#F6AD55",
         error: "#E53E3E",
-        info: "#3182CE"
+        info: "#3182CE",
+        calendar: {
+          past: "#F1F5F9",
+          today: "#EBF8FF",
+          future: "#FFFFFF",
+          assignment: "#DBEAFE",
+          overdue: "#FEE2E2"
+        }
       },
       fontFamily: {
         display: ["Plus Jakarta Sans", "sans-serif"],

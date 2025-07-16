@@ -14,7 +14,8 @@ const ClassGrid = ({
   onDelete, 
   onAdd, 
   onRetry,
-  onView 
+  onView,
+  onCalendarToggle
 }) => {
   if (loading) return <Loading type="cards" />;
   if (error) return <Error message={error} onRetry={onRetry} />;
@@ -31,14 +32,23 @@ const ClassGrid = ({
     );
   }
 
-  return (
+return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-bold text-slate-900">Classes</h2>
-        <Button onClick={onAdd}>
-          <ApperIcon name="Plus" className="h-4 w-4 mr-2" />
-          Add Class
-        </Button>
+        <div className="flex space-x-3">
+          <Button
+            variant="outline"
+            onClick={onCalendarToggle}
+          >
+            <ApperIcon name="Calendar" className="h-4 w-4 mr-2" />
+            Calendar View
+          </Button>
+          <Button onClick={onAdd}>
+            <ApperIcon name="Plus" className="h-4 w-4 mr-2" />
+            Add Class
+          </Button>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import ClassGrid from "@/components/organisms/ClassGrid";
+import AssignmentCalendar from "@/components/organisms/AssignmentCalendar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/atoms/Card";
 import Button from "@/components/atoms/Button";
 import FormField from "@/components/molecules/FormField";
@@ -8,7 +9,6 @@ import Select from "@/components/atoms/Select";
 import ApperIcon from "@/components/ApperIcon";
 import { classService } from "@/services/api/classService";
 import { studentService } from "@/services/api/studentService";
-
 const Classes = () => {
   const [classes, setClasses] = useState([]);
   const [students, setStudents] = useState([]);
@@ -17,7 +17,7 @@ const Classes = () => {
   const [showForm, setShowForm] = useState(false);
   const [editingClass, setEditingClass] = useState(null);
   const [formLoading, setFormLoading] = useState(false);
-
+  const [showCalendar, setShowCalendar] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     subject: "",
@@ -80,10 +80,13 @@ const Classes = () => {
     setShowForm(true);
   };
 
-  const handleView = (classItem) => {
+const handleView = (classItem) => {
     toast.info(`Viewing details for ${classItem.name}`);
   };
 
+  const handleCalendarToggle = () => {
+    setShowCalendar(!showCalendar);
+  };
   const handleDelete = async (classId) => {
     if (window.confirm("Are you sure you want to delete this class?")) {
       try {
@@ -298,6 +301,24 @@ const Classes = () => {
     );
   }
 
+if (showCalendar) {
+    return (
+      <div className="space-y-6">
+        <div className="flex justify-between items-center">
+          <h2 className="text-2xl font-bold text-slate-900">Assignment Calendar</h2>
+          <Button
+            variant="outline"
+            onClick={handleCalendarToggle}
+          >
+            <ApperIcon name="Grid" className="h-4 w-4 mr-2" />
+            Grid View
+          </Button>
+        </div>
+        <AssignmentCalendar classes={classes} />
+      </div>
+    );
+  }
+
   return (
     <ClassGrid
       classes={classes}
@@ -308,6 +329,7 @@ const Classes = () => {
       onAdd={handleAdd}
       onView={handleView}
       onRetry={loadData}
+      onCalendarToggle={handleCalendarToggle}
     />
   );
 };

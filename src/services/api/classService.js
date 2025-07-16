@@ -63,6 +63,35 @@ export const classService = {
       classItem.studentIds = classItem.studentIds.filter(id => id !== parseInt(studentId));
       return { ...classItem };
     }
+return null;
+  },
+
+  async getAssignmentsByClass(classId) {
+    await new Promise(resolve => setTimeout(resolve, 300));
+    const classItem = classes.find(c => c.Id === parseInt(classId));
+    return classItem ? classItem.assignments || [] : [];
+  },
+
+  async addAssignmentToClass(classId, assignmentId) {
+    await new Promise(resolve => setTimeout(resolve, 300));
+    const classItem = classes.find(c => c.Id === parseInt(classId));
+    if (classItem) {
+      if (!classItem.assignments) classItem.assignments = [];
+      if (!classItem.assignments.includes(parseInt(assignmentId))) {
+        classItem.assignments.push(parseInt(assignmentId));
+      }
+      return { ...classItem };
+    }
+    return null;
+  },
+
+  async removeAssignmentFromClass(classId, assignmentId) {
+    await new Promise(resolve => setTimeout(resolve, 300));
+    const classItem = classes.find(c => c.Id === parseInt(classId));
+    if (classItem && classItem.assignments) {
+      classItem.assignments = classItem.assignments.filter(id => id !== parseInt(assignmentId));
+      return { ...classItem };
+    }
     return null;
   }
 };

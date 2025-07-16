@@ -53,3 +53,61 @@
 .Toastify__toast--info {
   @apply bg-white border-l-4 border-info text-slate-800;
 }
+
+/* Calendar styles */
+.calendar-cell {
+  @apply relative;
+}
+
+.calendar-cell:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+.calendar-cell .group-hover\:opacity-100 {
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.assignment-item {
+  @apply cursor-grab active:cursor-grabbing;
+  user-select: none;
+}
+
+.assignment-item:hover {
+  @apply shadow-sm;
+}
+
+.assignment-item.dragging {
+  @apply opacity-50;
+}
+
+/* Calendar navigation */
+.calendar-nav {
+  @apply flex items-center justify-between p-4 border-b border-slate-200;
+}
+
+.calendar-nav button {
+  @apply hover:bg-slate-100 transition-colors;
+}
+
+/* Date cell animations */
+.calendar-cell {
+  @apply transition-all duration-200;
+}
+
+.calendar-cell:hover {
+  @apply shadow-md;
+}
+
+/* Assignment status indicators */
+.assignment-overdue {
+  @apply bg-red-100 text-red-800 border-red-200;
+}
+
+.assignment-due-soon {
+  @apply bg-yellow-100 text-yellow-800 border-yellow-200;
+}
+
+.assignment-completed {
+  @apply bg-green-100 text-green-800 border-green-200;
+}
