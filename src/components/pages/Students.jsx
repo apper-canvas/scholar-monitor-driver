@@ -2,14 +2,15 @@ import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import StudentTable from "@/components/organisms/StudentTable";
 import StudentForm from "@/components/organisms/StudentForm";
+import StudentOverview from "@/components/organisms/StudentOverview";
 import { studentService } from "@/services/api/studentService";
-
 const Students = () => {
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [showForm, setShowForm] = useState(false);
+const [showForm, setShowForm] = useState(false);
   const [editingStudent, setEditingStudent] = useState(null);
+  const [viewingStudent, setViewingStudent] = useState(null);
   const [formLoading, setFormLoading] = useState(false);
 
   const loadStudents = async () => {
@@ -35,11 +36,14 @@ const Students = () => {
     setShowForm(true);
   };
 
-  const handleEdit = (student) => {
+const handleEdit = (student) => {
     setEditingStudent(student);
     setShowForm(true);
   };
 
+  const handleView = (student) => {
+    setViewingStudent(student);
+  };
   const handleDelete = async (studentId) => {
     if (window.confirm("Are you sure you want to delete this student?")) {
       try {
@@ -77,12 +81,15 @@ const Students = () => {
     }
   };
 
-  const handleCancel = () => {
+const handleCancel = () => {
     setShowForm(false);
     setEditingStudent(null);
   };
 
-  if (showForm) {
+  const handleBackToList = () => {
+    setViewingStudent(null);
+  };
+if (showForm) {
     return (
       <StudentForm
         student={editingStudent}
@@ -93,7 +100,16 @@ const Students = () => {
     );
   }
 
-  return (
+  if (viewingStudent) {
+    return (
+      <StudentOverview
+        student={viewingStudent}
+        onBack={handleBackToList}
+      />
+    );
+  }
+
+return (
     <StudentTable
       students={students}
       loading={loading}
@@ -101,6 +117,7 @@ const Students = () => {
       onEdit={handleEdit}
       onDelete={handleDelete}
       onAdd={handleAdd}
+      onView={handleView}
       onRetry={loadStudents}
     />
   );
