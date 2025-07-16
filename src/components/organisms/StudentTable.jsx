@@ -7,6 +7,7 @@ import SearchBar from "@/components/molecules/SearchBar";
 import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
 import Empty from "@/components/ui/Empty";
+import ParentContactModal from "@/components/organisms/ParentContactModal";
 
 const StudentTable = ({ 
   students, 
@@ -20,7 +21,8 @@ const StudentTable = ({
   const [searchQuery, setSearchQuery] = useState("");
   const [sortField, setSortField] = useState("lastName");
   const [sortDirection, setSortDirection] = useState("asc");
-
+  const [selectedStudent, setSelectedStudent] = useState(null);
+  const [showParentModal, setShowParentModal] = useState(false);
   const filteredStudents = students.filter(student => 
     `${student.firstName} ${student.lastName}`.toLowerCase().includes(searchQuery.toLowerCase()) ||
     student.email.toLowerCase().includes(searchQuery.toLowerCase())
@@ -44,11 +46,20 @@ const StudentTable = ({
       setSortField(field);
       setSortDirection("asc");
     }
+};
+
+  const handleParentContact = (student) => {
+    setSelectedStudent(student);
+    setShowParentModal(true);
+  };
+
+  const handleCloseParentModal = () => {
+    setShowParentModal(false);
+    setSelectedStudent(null);
   };
 
   if (loading) return <Loading type="table" />;
   if (error) return <Error message={error} onRetry={onRetry} />;
-
   return (
     <Card>
       <CardHeader>
@@ -143,8 +154,16 @@ const StudentTable = ({
                         {student.status}
                       </Badge>
                     </td>
-                    <td className="py-4 px-4">
+<td className="py-4 px-4">
                       <div className="flex justify-end space-x-2">
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => handleParentContact(student)}
+                          title="Parent Contact"
+                        >
+                          <ApperIcon name="Users" className="h-4 w-4" />
+                        </Button>
                         <Button
                           variant="ghost"
                           size="sm"
@@ -167,8 +186,15 @@ const StudentTable = ({
               </tbody>
             </table>
           </div>
-        )}
+)}
       </CardContent>
+      
+      {showParentModal && selectedStudent && (
+        <ParentContactModal
+          student={selectedStudent}
+          onClose={handleCloseParentModal}
+        />
+      )}
     </Card>
   );
 };

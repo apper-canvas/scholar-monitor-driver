@@ -7,9 +7,12 @@
     "email": "emma.johnson@email.com",
     "phone": "(555) 123-4567",
     "enrollmentDate": "2024-08-15",
-    "status": "Active"
+    "status": "Active",
+    "parentPhone": "(555) 123-4567",
+    "parentEmail": "parent.johnson@email.com",
+    "parentNotes": "Prefers email communication. Available after 3 PM on weekdays."
   },
-  {
+{
     "Id": 2,
     "firstName": "Liam",
     "lastName": "Smith",
@@ -17,9 +20,12 @@
     "email": "liam.smith@email.com",
     "phone": "(555) 234-5678",
     "enrollmentDate": "2024-08-15",
-    "status": "Active"
+    "status": "Active",
+    "parentPhone": "(555) 234-5678",
+    "parentEmail": "parent.smith@email.com",
+    "parentNotes": "Works night shifts. Best time to contact is between 9 AM - 2 PM."
   },
-  {
+{
     "Id": 3,
     "firstName": "Sophia",
     "lastName": "Davis",
@@ -27,9 +33,12 @@
     "email": "sophia.davis@email.com",
     "phone": "(555) 345-6789",
     "enrollmentDate": "2024-08-15",
-    "status": "Active"
+    "status": "Active",
+    "parentPhone": "(555) 345-6789",
+    "parentEmail": "parent.davis@email.com",
+    "parentNotes": "Single parent. Very involved in student's education. Prefers detailed updates."
   },
-  {
+{
     "Id": 4,
     "firstName": "Noah",
     "lastName": "Brown",
@@ -37,9 +46,12 @@
     "email": "noah.brown@email.com",
     "phone": "(555) 456-7890",
     "enrollmentDate": "2024-08-15",
-    "status": "Active"
+    "status": "Active",
+    "parentPhone": "(555) 456-7890",
+    "parentEmail": "parent.brown@email.com",
+    "parentNotes": "Both parents work full-time. Prefer evening calls after 6 PM."
   },
-  {
+{
     "Id": 5,
     "firstName": "Ava",
     "lastName": "Wilson",
@@ -47,9 +59,12 @@
     "email": "ava.wilson@email.com",
     "phone": "(555) 567-8901",
     "enrollmentDate": "2024-08-15",
-    "status": "Active"
+    "status": "Active",
+    "parentPhone": "(555) 567-8901",
+    "parentEmail": "parent.wilson@email.com",
+    "parentNotes": "Parent is a teacher at another school. Very understanding of academic challenges."
   },
-  {
+{
     "Id": 6,
     "firstName": "William",
     "lastName": "Garcia",
@@ -57,9 +72,12 @@
     "email": "william.garcia@email.com",
     "phone": "(555) 678-9012",
     "enrollmentDate": "2024-08-15",
-    "status": "Active"
+    "status": "Active",
+    "parentPhone": "(555) 678-9012",
+    "parentEmail": "parent.garcia@email.com",
+    "parentNotes": "Spanish-speaking family. Daughter often helps translate during conversations."
   },
-  {
+{
     "Id": 7,
     "firstName": "Isabella",
     "lastName": "Martinez",
@@ -67,9 +85,12 @@
     "email": "isabella.martinez@email.com",
     "phone": "(555) 789-0123",
     "enrollmentDate": "2024-08-15",
-    "status": "Active"
+    "status": "Active",
+    "parentPhone": "(555) 789-0123",
+    "parentEmail": "parent.martinez@email.com",
+    "parentNotes": "Very active in school volunteering. Often helps with school events."
   },
-  {
+{
     "Id": 8,
     "firstName": "James",
     "lastName": "Anderson",
@@ -77,6 +98,9 @@
     "email": "james.anderson@email.com",
     "phone": "(555) 890-1234",
     "enrollmentDate": "2024-08-15",
-    "status": "Active"
+    "status": "Active",
+    "parentPhone": "(555) 890-1234",
+    "parentEmail": "parent.anderson@email.com",
+    "parentNotes": "Divorced parents. Both should be included in important communications."
   }
 ]

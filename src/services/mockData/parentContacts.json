@@ -1,0 +1,170 @@
+[
+  {
+    "Id": 1,
+    "studentId": 1,
+    "phone": "(555) 123-4567",
+    "email": "parent.johnson@email.com",
+    "notes": "Prefers email communication. Available after 3 PM on weekdays.",
+    "communications": [
+      {
+        "Id": 1,
+        "type": "phone",
+        "subject": "Math grade discussion",
+        "notes": "Discussed Emma's recent improvement in algebra. Parent is very supportive and asked about additional resources.",
+        "outcome": "Provided list of online math resources",
+        "date": "2024-01-15T14:30:00.000Z",
+        "createdBy": "Ms. Anderson"
+      },
+      {
+        "Id": 2,
+        "type": "email",
+        "subject": "Parent-teacher conference scheduling",
+        "notes": "Confirmed attendance for upcoming parent-teacher conference. Requested to discuss extracurricular activities.",
+        "outcome": "Scheduled meeting for next Thursday at 4 PM",
+        "date": "2024-01-10T10:15:00.000Z",
+        "createdBy": "Ms. Anderson"
+      }
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "1/15/2024 2:30:00 PMZ"
+  },
+  {
+    "Id": 2,
+    "studentId": 2,
+    "phone": "(555) 234-5678",
+    "email": "parent.smith@email.com",
+    "notes": "Works night shifts. Best time to contact is between 9 AM - 2 PM.",
+    "communications": [
+      {
+        "Id": 1,
+        "type": "meeting",
+        "subject": "Behavioral concerns",
+        "notes": "Met with parent to discuss Liam's recent behavior in class. Parent was very understanding and supportive.",
+        "outcome": "Agreed on behavior modification plan",
+        "date": "2024-01-12T13:00:00.000Z",
+        "createdBy": "Mr. Thompson"
+      }
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-12T13:00:00.000Z"
+  },
+  {
+    "Id": 3,
+    "studentId": 3,
+    "phone": "(555) 345-6789",
+    "email": "parent.davis@email.com",
+    "notes": "Single parent. Very involved in student's education. Prefers detailed updates.",
+    "communications": [
+      {
+        "Id": 1,
+        "type": "email",
+        "subject": "Weekly progress update",
+        "notes": "Sent weekly progress report. Sophia is excelling in English and Art classes.",
+        "outcome": "Parent requested more challenging reading materials",
+        "date": "2024-01-14T11:00:00.000Z",
+        "createdBy": "Ms. Rodriguez"
+      },
+      {
+        "Id": 2,
+        "type": "phone",
+        "subject": "Science fair project",
+        "notes": "Discussed Sophia's science fair project on renewable energy. Parent offered to help with materials.",
+        "outcome": "Coordinated material pickup schedule",
+        "date": "2024-01-08T16:45:00.000Z",
+        "createdBy": "Mr. Johnson"
+      }
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-14T11:00:00.000Z"
+  },
+  {
+    "Id": 4,
+    "studentId": 4,
+    "phone": "(555) 456-7890",
+    "email": "parent.brown@email.com",
+    "notes": "Both parents work full-time. Prefer evening calls after 6 PM.",
+    "communications": [
+      {
+        "Id": 1,
+        "type": "phone",
+        "subject": "College preparation discussion",
+        "notes": "Talked about Noah's college preparation timeline. Parents are concerned about application deadlines.",
+        "outcome": "Scheduled meeting with guidance counselor",
+        "date": "2024-01-13T18:30:00.000Z",
+        "createdBy": "Ms. Wilson"
+      }
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-13T18:30:00.000Z"
+  },
+  {
+    "Id": 5,
+    "studentId": 5,
+    "phone": "(555) 567-8901",
+    "email": "parent.wilson@email.com",
+    "notes": "Parent is a teacher at another school. Very understanding of academic challenges.",
+    "communications": [],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "1/1/2024 12:00:00 AMZ"
+  },
+  {
+    "Id": 6,
+    "studentId": 6,
+    "phone": "(555) 678-9012",
+    "email": "parent.garcia@email.com",
+    "notes": "Spanish-speaking family. Daughter often helps translate during conversations.",
+    "communications": [
+      {
+        "Id": 1,
+        "type": "meeting",
+        "subject": "Academic progress review",
+        "notes": "Met with parents and William to discuss his progress in all subjects. Very supportive family.",
+        "outcome": "Set up tutoring schedule for mathematics",
+        "date": "2024-01-11T15:00:00.000Z",
+        "createdBy": "Ms. Martinez"
+      }
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-11T15:00:00.000Z"
+  },
+  {
+    "Id": 7,
+    "studentId": 7,
+    "phone": "(555) 789-0123",
+    "email": "parent.martinez@email.com",
+    "notes": "Very active in school volunteering. Often helps with school events.",
+    "communications": [
+      {
+        "Id": 1,
+        "type": "email",
+        "subject": "Art class showcase",
+        "notes": "Discussed Isabella's artwork being featured in the school art showcase. Parent is very proud.",
+        "outcome": "Confirmed attendance at art show opening",
+        "date": "2024-01-09T12:20:00.000Z",
+        "createdBy": "Ms. Chen"
+      }
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-09T12:20:00.000Z"
+  },
+  {
+    "Id": 8,
+    "studentId": 8,
+    "phone": "(555) 890-1234",
+    "email": "parent.anderson@email.com",
+    "notes": "Divorced parents. Both should be included in important communications.",
+    "communications": [
+      {
+        "Id": 1,
+        "type": "phone",
+        "subject": "Graduation requirements",
+        "notes": "Called to discuss James' graduation requirements and ensure he's on track for senior year.",
+        "outcome": "Confirmed all requirements will be met",
+        "date": "2024-01-07T17:15:00.000Z",
+        "createdBy": "Mr. Davis"
+      }
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-07T17:15:00.000Z"
+  }
+]
